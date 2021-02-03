@@ -1,0 +1,8 @@
+{
+  "name": "designhubz-widget",
+  "version": "0.0.6",
+  "description": "API to load Designhubz XR widgets",
+  "main": "dist/index.js",
+  "author": "Designhubz",
+  "license": "UNLICENSED"
+}

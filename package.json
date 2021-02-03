@@ -1,0 +1,22 @@
+{
+  "name": "@designhubz-widget/example",
+  "version": "0.0.6",
+  "description": "API example",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js -w"
+  },
+  "author": "Designhubz",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "ts-loader": "^8.0.14",
+    "typescript": "latest",
+    "webpack": "^5.20.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "designhubz-widget": "file:./designhubz-widget"
+  }
+}
