@@ -19,6 +19,6 @@ This project highlights the usage of the designhubz web SDK.
   
 ## Main files Description
 
-1. Index.html: shows how you can add a reference for our SDK (via the script tag). Also, you can see the container with defined dimensions where the widget (iFrame will be injected).
-2. /src/index.ts: this is the main script of the application. It highlights the way you can interact with the SDK. In the provided example, we are fetching a specific product and creating a widget for it.
-3. /designhubz-widget/dist: contains the API of the SDK we've built along with documentation. (We will generate docs for it soon)
+1. This project uses our web SDK as a local dependency: package `designhubz-widget` (We will generate docs for it soon, but interfaces/types are included).
+2. *index.html* : shows an `HTMLDivElement` where the widget (iFrame) will be contained.
+3. *src/index.ts* : In this example, we are fetching a specific product, creating and interacting with a widget.
