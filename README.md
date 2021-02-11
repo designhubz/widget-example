@@ -4,7 +4,7 @@ This project highlights the usage of the designhubz web SDK.
 
 ## Setup
 
-1. Clone project to your desktop and open command prompt in root project folder
+1. Clone project and open command prompt in root project folder
 2. Install libraries by running the following command:
 
   ```bash

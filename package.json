@@ -1,12 +1,16 @@
 {
-  "name": "@designhubz-widget/example",
-  "version": "0.0.6",
+  "name": "@designhubz-widget/public-example",
+  "version": "0.0.61",
   "description": "API example",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "scripts": {
     "start": "webpack --config webpack.config.js -w"
   },
   "author": "Designhubz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designhubz/widget-example"
+  },
   "license": "UNLICENSED",
   "devDependencies": {
     "browser-sync": "^2.26.14",

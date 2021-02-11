@@ -4,7 +4,7 @@ module.exports = {
     
     entry: './src/index.ts',
     output: {
-        path: PATH.resolve(__dirname, './build'),
+        path: PATH.resolve(__dirname, './dist'),
         filename: 'index.js',
     },
     mode: 'development',
