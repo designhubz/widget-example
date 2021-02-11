@@ -1,5 +1,5 @@
 import { Stat, TrackingStatus } from './Designhubz';
-import { ISignal } from '@designhubz-widget/utils';
+import { ISignal } from './Signals';
 import { IProduct, IEyewearProduct, IMakeupProduct, I3DProduct } from './Product';
 import { ISnapshot } from './Snapshot';
 

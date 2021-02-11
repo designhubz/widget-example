@@ -1,8 +1,14 @@
 {
-  "name": "designhubz-widget",
-  "version": "0.0.6",
-  "description": "API to load Designhubz XR widgets",
-  "main": "dist/index.js",
-  "author": "Designhubz",
-  "license": "UNLICENSED"
+	"name": "designhubz-widget",
+	"version": "0.0.61",
+	"description": "",
+	"libraryName": "Designhubz",
+	"main": "api/Designhubz.umd.js",
+	"module": "api/Designhubz.es5.js",
+	"typings": "api/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"author": "Designhubz",
+	"license": "UNLICENSED"
 }
