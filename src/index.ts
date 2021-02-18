@@ -1,4 +1,4 @@
-import * as Designhubz from 'designhubz-widget';
+// import * as Designhubz from 'designhubz-widget';
 
 (async () => {
     
@@ -9,9 +9,11 @@ import * as Designhubz from 'designhubz-widget';
 
     console.log('1) CustomProps:', CustomProps);
 
+    const Designhubz = await import('designhubz-widget');
+
     const product = await Designhubz.fetchProduct(
         'eyewear', // Workspace key (project key, provided by CMS)
-        ['728506', '732058', '743263'][0], // Variation key
+        '8053672730593', // Variation key
         CustomProps // Optional check & typing for integrated variation properties
     );
 

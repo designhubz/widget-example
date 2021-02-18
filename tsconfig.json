@@ -6,6 +6,7 @@
     "baseUrl": ".",
     "strict": true,
     "moduleResolution": "node",
+    "module": "esnext",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   }
