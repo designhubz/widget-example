@@ -1,5 +1,6 @@
 import { IScoredRecommendation } from './Recommendation';
 import { I3DWidget, IEyewearWidget, IMakeupWidget, IMultiWidget } from './Widget';
+import { TProgressCallback } from './Types';
 
 /** XR product */
 export interface IProduct<T>
@@ -40,7 +41,7 @@ export interface I3DProduct<T> extends IProduct<T>
 	 * @returns 3D widget
 	 * @throws {InvalidArgumentError} Throws if domElement is not a valid HTMLElement
 	 */
-	create3DWidget(domElement: HTMLDivElement): Promise<I3DWidget<T>>;
+	create3DWidget(domElement: HTMLDivElement, progressHandler?: TProgressCallback): Promise<I3DWidget<T>>;
 }
 
 export interface IEyewearProduct<T> extends I3DProduct<T>
@@ -52,14 +53,14 @@ export interface IEyewearProduct<T> extends I3DProduct<T>
 	 * @returns Eyewear widget
 	 * @throws {InvalidArgumentError} Throws if domElement is not a valid HTMLElement
 	 */
-	createEyewearWidget(domElement: HTMLDivElement): Promise<IEyewearWidget<T>>;
+	createEyewearWidget(domElement: HTMLDivElement, progressHandler?: TProgressCallback): Promise<IEyewearWidget<T>>;
 
 	/**
 	 * @param domElement Container div for the widget
 	 * @returns A widget with specialized widget tabs
 	 * @throws {InvalidArgumentError} Throws if domElement is not a valid HTMLElement
 	 */
-	createMultiWidget(domElement: HTMLDivElement): Promise<IMultiWidget<T>>;
+	createMultiWidget(domElement: HTMLDivElement, progressHandler?: TProgressCallback): Promise<IMultiWidget<T>>;
 }
 
 export interface IMakeupProduct<T> extends IProduct<T>
@@ -71,5 +72,5 @@ export interface IMakeupProduct<T> extends IProduct<T>
 	 * @returns Makeup widget
 	 * @throws {InvalidArgumentError} Throws if domElement is not a valid HTMLElement
 	 */
-	createMakeupWidget(domElement: HTMLDivElement): Promise<IMakeupWidget<T>>;
+	createMakeupWidget(domElement: HTMLDivElement, progressHandler?: TProgressCallback): Promise<IMakeupWidget<T>>;
 }

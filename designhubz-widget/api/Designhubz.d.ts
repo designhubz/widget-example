@@ -1,5 +1,5 @@
 import { Dev } from './Dev';
-import { IProduct } from './Product';
+import { IProduct, IEyewearProduct, IMakeupProduct } from './Product';
 
 /** Designhubz widgets API */
 
@@ -40,3 +40,6 @@ export declare function fetchProduct<T extends Record<string, string>>(workspace
  * @returns A map of product details to keys (or undefined if not found)
  */
 export declare function fetchProducts<T extends Record<string, string>>(workspaceKey: string, productKeys: string[], props?: T): Promise<Record<string, IProduct<T> | undefined>>;
+
+export declare function fetchEyewearProduct<T extends Record<string, string>>(productKey: string, props?: T): Promise<IEyewearProduct<T>>;
+export declare function fetchMakeupProduct<T extends Record<string, string>>(productKey: string, props?: T): Promise<IMakeupProduct<T>>;
