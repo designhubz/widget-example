@@ -1,5 +1,6 @@
 import { Dev } from './Dev';
 import { IProduct, IEyewearProduct, IMakeupProduct } from './Product';
+import { TProps } from './Types';
 
 /** Designhubz widgets API */
 
@@ -30,7 +31,7 @@ export declare const dev: Dev;
  * @returns Product details
  * @throws If not found
  */
-export declare function fetchProduct<T extends Record<string, string>>(workspaceKey: string, productKey: string, props?: T): Promise<IProduct<T>>;
+export declare function fetchProduct<T extends TProps>(workspaceKey: string, productKey: string, props?: T): Promise<IProduct<T>>;
 
 /**
  * Fetch multiple products' details from a workspace
@@ -39,7 +40,7 @@ export declare function fetchProduct<T extends Record<string, string>>(workspace
  * @param props [Optional] Variation properties as integrated in the CMS
  * @returns A map of product details to keys (or undefined if not found)
  */
-export declare function fetchProducts<T extends Record<string, string>>(workspaceKey: string, productKeys: string[], props?: T): Promise<Record<string, IProduct<T> | undefined>>;
+export declare function fetchProducts<T extends TProps>(workspaceKey: string, productKeys: string[], props?: T): Promise<Record<string, IProduct<T> | undefined>>;
 
-export declare function fetchEyewearProduct<T extends Record<string, string>>(productKey: string, props?: T): Promise<IEyewearProduct<T>>;
-export declare function fetchMakeupProduct<T extends Record<string, string>>(productKey: string, props?: T): Promise<IMakeupProduct<T>>;
+export declare function fetchEyewearProduct<T extends TProps>(productKey: string, props?: T): Promise<IEyewearProduct<T>>;
+export declare function fetchMakeupProduct<T extends TProps>(productKey: string, props?: T): Promise<IMakeupProduct<T>>;

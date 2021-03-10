@@ -32,6 +32,13 @@ export interface IProduct<T>
 	isMakeup(): this is IMakeupProduct<T>;
 }
 
+/** Utility interface */
+export interface IGenericProduct extends IProduct<any>
+{
+	/** Product specific properties are disabled on generic interface */
+	readonly properties: any;
+}
+
 export interface I3DProduct<T> extends IProduct<T>
 {
 	_3D: boolean;

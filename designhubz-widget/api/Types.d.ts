@@ -1,4 +1,11 @@
+/**
+ * @param progress Normalized [0, 1] progress value
+ */
 export type TProgressCallback = (progress: number) => void;
+
+export type TProps = {
+    [x: string]: string | undefined
+};
 
 type callback<T> = (arg: T) => void;
 

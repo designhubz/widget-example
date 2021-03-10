@@ -1,5 +1,5 @@
 import { Stat, TrackingStatus } from './Designhubz';
-import { IProduct, IEyewearProduct, IMakeupProduct, I3DProduct } from './Product';
+import { IProduct, IEyewearProduct, IMakeupProduct, I3DProduct, IGenericProduct } from './Product';
 import { ISnapshot } from './Snapshot';
 import { ISignal, TProgressCallback } from './Types';
 
@@ -18,6 +18,10 @@ export interface IWidget<T, P extends IProduct<T>>
 	loadVariation(variation: P, progressHandler?: TProgressCallback): Promise<void>;
 }
 
+/** Utility interface */
+export interface IGenericWidget extends IWidget<any, IGenericProduct>
+{}
+
 export interface I3DWidget<T> extends IWidget<T, I3DProduct<T>>
 {
 	_3D: boolean;
@@ -31,7 +35,7 @@ export interface ITryonwidget<T, P extends IProduct<T>> extends IWidget<T, P>
 export interface IEyewearWidget<T> extends ITryonwidget<T, IEyewearProduct<T>>
 {
 	_eyewear: boolean;
-	readonly fit: boolean;
+	queryFit(): Promise<boolean>;
 }
 
 export interface IMakeupWidget<T> extends ITryonwidget<T, IMakeupProduct<T>>
